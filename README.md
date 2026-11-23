@@ -14,7 +14,12 @@ This project builds a longitudinal semi-log multiple regression model in Excel u
 ## Model Specification & Variable Definitions
 Both `2013 VALUE` and `2011 VALUE` are natural-log transformed (`Ln(VALUE)`) to address right-skewness and support semi-log percentage interpretations:
 
-$$\text{Ln}(\text{VALUE 2013}) = \beta_0 + \beta_1\,\text{METRO\_CITY} + \beta_2\,\text{REG\_NE} + \beta_3\,\text{REG\_MW} + \beta_4\,\text{REG\_SOUTH} + \beta_5\,\text{LMED} + \beta_6\,\text{FMR} + \beta_7\,\text{BUILT} + \beta_8\,\text{ROOMS} + \beta_9\,\text{ZINC2} + \beta_{10}\,\text{ZADEQ\_ADEQ} + \beta_{11}\,\text{UTILITY} + \beta_{12}\,\text{OTHERCOST} + \beta_{13}\,\text{AGE1} + \beta_{14}\,\text{PER} + \beta_{15}\,\text{BEDRMS} + \beta_{16}\,\text{Ln}(\text{VALUE 2011})$$
+$$\begin{aligned}
+\mathrm{Ln}(\mathrm{VALUE\ 2013}) = &\ \beta_0 + \beta_1\,\mathrm{METRO\_CITY} + \beta_2\,\mathrm{REG\_NE} + \beta_3\,\mathrm{REG\_MW} + \beta_4\,\mathrm{REG\_SOUTH} \\
+& + \beta_5\,\mathrm{LMED} + \beta_6\,\mathrm{FMR} + \beta_7\,\mathrm{BUILT} + \beta_8\,\mathrm{ROOMS} + \beta_9\,\mathrm{ZINC2} \\
+& + \beta_{10}\,\mathrm{ZADEQ\_ADEQ} + \beta_{11}\,\mathrm{UTILITY} + \beta_{12}\,\mathrm{OTHERCOST} + \beta_{13}\,\mathrm{AGE1} \\
+& + \beta_{14}\,\mathrm{PER} + \beta_{15}\,\mathrm{BEDRMS} + \beta_{16}\,\mathrm{Ln}(\mathrm{VALUE\ 2011})
+\end{aligned}$$
 
 * **Binary / Dummy Indicators:**
   * `METRO_CITY`: `1` if central city (`METRO3 = '1'`), `0` otherwise.
